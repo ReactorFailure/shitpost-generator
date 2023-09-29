@@ -2,4 +2,7 @@
 You somehow found it
 > **NOTE**
 > Copypaste:
-> https://reactorfailure.github.io/shitpost-generator/
+> | Name  | SLink |
+| ------------- | ------------- |
+| Main  | https://reactorfailure.github.io/shitpost-generator/  |
+| Lorem Ipsum  | Lorem Ipsum  |
