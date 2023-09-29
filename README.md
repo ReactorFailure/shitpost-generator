@@ -1,7 +1,7 @@
 # shitpost-protocol
 You somehow found it
 
-| Name  | Link |
-| ------------- | ------------- |
-| Main  | https://reactorfailure.github.io/shitpost-generator/  |
-| Lorem Ipsum  | Lorem Ipsum  |
+| Name  | Link | Description |
+| ------------- | ------------- | ------------- |
+| Main  | https://reactorfailure.github.io/shitpost-generator/  | Main shitpost |
+| Lorem Ipsum  | Lorem Ipsum  | Just another subdomain for shitposts |
