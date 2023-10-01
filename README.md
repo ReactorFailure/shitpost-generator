@@ -1,4 +1,4 @@
-# shitpost-protocol
+# shitpost-generator
 You somehow found it
 
 | Name  | Link | Description |
