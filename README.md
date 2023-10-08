@@ -1,7 +1,7 @@
 # shitpost-generator
 You somehow found it
 
-### Shareable links
+## Shareable links
 | Name  | Link | Description |
 | ------------- | ------------- | ------------- |
 | Main  | https://reactorfailure.github.io/shitpost-generator/  | Main shitpost |
