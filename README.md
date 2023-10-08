@@ -4,4 +4,4 @@ You somehow found it
 | Name  | Link | Description |
 | ------------- | ------------- | ------------- |
 | Main  | https://reactorfailure.github.io/shitpost-generator/  | Main shitpost |
-| Lorem Ipsum  | Lorem Ipsum  | Just another subdomain for shitposts |
+| Media share link  | https://reactorfailure.github.io/shitpost-generator/media/[imageName.png]  | For sharing images or media |
