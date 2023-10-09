@@ -19,36 +19,67 @@
     <meta http-equiv="refresh" content="0; url=https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html" />
 
     <script>
+      // const vidURL = [
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/jesus_no_affiliation.mp4",
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/misery.mp4",
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/carlDontKnowHowToSay.mp4",
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/catScream.webm",
+      // ];
+      // const imgURL = [
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/PopcornDollar.jpg",
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/gambleMore.png",
+      //   "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/huh,gif"
+      // ];
+      
+      // const vidWidth = [250, 300, 350];
+      // const vidHeight = [202, 240, 280];
+
+      // function setRandMetaTag() {
+      //   const rand_VidURL = vidURL[Math.floor(Math.random() * vidURL.length)];
+      //   const rand_ImgURL = imgURL[Math.floor(Math.random() * imgURL.length)];
+      //   const rand_VidWidth = vidWidth[Math.floor(Math.random() * vidWidth.length)];
+      //   const rand_VidHeight = vidHeight[Math.floor(Math.random() * vidHeight.length)];
+
+      //   document.querySelector('meta[property="og:video:url"]').content = rand_VidURL;
+      //   document.querySelector('meta[property="og:image"]').content = rand_ImgURL;
+      //   document.querySelector('meta[property="og:video:width"]').content = rand_VidWidth;
+      //   document.querySelector('meta[property="og:video:height"]').content = rand_VidHeight;
+
+      // }
+
+      // setRandMetaTag();
+      // setInterval(setRandMetaTag, 1000); //Change every 1 second lol
+      
+      //Thank you to JXL for this code
+      const express = require("express");
+      const app = express();
+
+      const TEMPLATE = `
+      <html><head><meta property="og:image" content="__THUMBNAIL__"><meta property="og:type" content="video.other"><!-- Video Link --><meta property="og:video:url" content="__VIDEO_LINK__"><meta property="og:video:height" content="202"><meta property="og:video:width" content="250"></head></html>`
       const vidURL = [
-        "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/jesus_no_affiliation.mp4",
-        "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/misery.mp4",
-        "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/carlDontKnowHowToSay.mp4",
-        "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/catScream.webm",
+          "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/jesus_no_affiliation.mp4",
+          "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/misery.mp4",
+          "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/carlDontKnowHowToSay.mp4",
+          "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/catScream.webm",
       ];
       const imgURL = [
         "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/PopcornDollar.jpg",
         "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/gambleMore.png",
         "https://raw.githubusercontent.com/ReactorFailure/shitpost-generator/main/media/huh,gif"
       ];
-      
-      const vidWidth = [250, 300, 350];
-      const vidHeight = [202, 240, 280];
 
-      function setRandMetaTag() {
-        const rand_VidURL = vidURL[Math.floor(Math.random() * vidURL.length)];
-        const rand_ImgURL = imgURL[Math.floor(Math.random() * imgURL.length)];
-        const rand_VidWidth = vidWidth[Math.floor(Math.random() * vidWidth.length)];
-        const rand_VidHeight = vidHeight[Math.floor(Math.random() * vidHeight.length)];
+      app.get('/', (req, res) => {
+        const text = TEMPLATE
+        .replace("__THUMBNAIL__", imgURL[Math.floor(Math.random() * imgURL.length)])
+        .replace("__VIDEO_LINK__", vidURL[Math.floor(Math.random() * vidURL.length)]);
 
-        document.querySelector('meta[property="og:video:url"]').content = rand_VidURL;
-        document.querySelector('meta[property="og:image"]').content = rand_ImgURL;
-        document.querySelector('meta[property="og:video:width"]').content = rand_VidWidth;
-        document.querySelector('meta[property="og:video:height"]').content = rand_VidHeight;
+        res.send(text);
+      })
 
-      }
-
-      setRandMetaTag();
-      setInterval(setRandMetaTag, 1000); //Change every 1 second lol
+      const PORT = process.env.PORT ?? 3000;
+      app.listen(PORT, () => {
+        console.log(`App is listening on port ${PORT}`)
+      })
     </script>
 
   </head>
